@@ -6,6 +6,7 @@
     $arr = json_decode($data, true);
     print_r($arr);
     if($_GET["ac"]==0){
+        echo "login\n";
         $user = $arr["user_name"];
         $pass = $arr["user_pass"];
         $status = $clCon->checkUser($user,$pass);
@@ -16,7 +17,7 @@
             echo json_encode(["status"=>"error", "message"=>"login fail"]);
         }
     }
-    // else if($_GET["ac"]==1){
-    //     echo "signin";
-    // }
+    else if($_GET["ac"]==1){
+        echo "signin\n";
+    }
 ?>
