@@ -14,9 +14,8 @@ body{
     background-repeat: no-repeat;
     background-size: 100% auto;
     display: inline-block;
-    /* padding: 15%; */
     height: 650px;
-    width: 30%;
+    width: 40%;
     float: left;
 }
 .divLogin{
@@ -53,10 +52,13 @@ button{
 }
 .no{
     font-size: 18px;
-    border: solid #79583b;
+    border: solid #9b8470;
     color: #41250d;
 }
 .no:hover{
-    background: #79583b;
+    background: #9b8470;
     color: #fff;
+}
+a{
+    text-decoration: none;
 }
