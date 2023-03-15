@@ -1,0 +1,13 @@
+body{
+    padding: 3%;
+}
+.divBlan{
+    background-image: url('https://i.pinimg.com/originals/2b/0c/1b/2b0c1b3477d70ef98cbb3fc4ef6fd617.jpg');
+    padding: 10%;
+    height: 300px;
+    display: inline-block;
+}
+.divLogin{
+    padding: 5%;
+    display: inline-block;
+}
