@@ -5,7 +5,7 @@
             $sql = "SELECT * FROM user WHERE user_name = {$name} 
                 and user_pass = {$pass}";
             $check = $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
-            return $check;
+            return $check->execute();
         }
     }
 ?>
