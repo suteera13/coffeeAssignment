@@ -45,4 +45,18 @@ button{
     background: #41250d;
     color: #fff;
     font-size: 18px;
+    border: solid #41250d;
+}
+.yes:hover{
+    background: #fff;
+    color: #41250d;
+}
+.no{
+    font-size: 18px;
+    border: solid #79583b;
+    color: #41250d;
+}
+.no:hover{
+    background: #79583b;
+    color: #fff;
 }
