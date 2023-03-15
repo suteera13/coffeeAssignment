@@ -1,4 +1,5 @@
 <?php
+    session_start();
     include_once 'class.php';
     $clCon = new control();
     $data = file_get_contents("php://input");
@@ -7,19 +8,15 @@
     if($_GET["ac"]==0){
         $user = $arr["user_name"];
         $pass = $arr["user_pass"];
-        echo "\nname:".$user."\npass:".$pass."\n";
         $status = $clCon->checkUser($user,$pass);
         if($status==1){
-            echo '<script>alert(login successfuly)</script>';
-            echo '<script>goto(index.html)</script>';
+            echo json_encode(["status"=>"ok", "message"=>"welcome to coffee site"]);
+            $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
         }else{
-            phpAlert("login fail");
+            echo json_encode(["status"=>"error", "message"=>"login fail"]);
         }
     }
     // else if($_GET["ac"]==1){
     //     echo "signin";
     // }
-    function phpAlert($msg) {
-        echo '<script type="text/javascript">alert("'.$msg.'")</script>';
-    }
 ?>

@@ -20,3 +20,32 @@ async function loginClick(){
         console.log("Error : "+ er);
     }
 }
+async function signupClick(){
+    const keypass = document.getElementById("password").value;
+    const conpass = document.getElementById("confirm").value;
+    if(keypass==conpass){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+    // url = "http://localhost/coffeeAssignment/api/controls.php?ac=1";
+    // const checkUser = {
+    //     user_name : document.getElementById("username").value,
+    //     user_pass : document.getElementById("password").value
+    // };
+    // try{
+    //     const response = await fetch(url,{
+    //         method: "post",
+    //         headers: {"Content-Type":"application/text"},
+    //         body: JSON.stringify(checkUser)
+    //     });
+    //     if(!response.ok){
+    //         const message = "Error with status code : "+ response.status;
+    //         throw new Error(message);
+    //     }
+    //     const data = await response.text();
+    //     console.log(data);
+    // }catch(er){
+    //     console.log("Error : "+ er);
+    // }
+}
