@@ -1,7 +1,6 @@
 async function loginClick(){
-    url = "http://localhost/coffeeAssignment/api/control.php";
+    url = "http://localhost/coffeeAssignment/api/controls.php?ac=0";
     const checkUser = {
-        action : "login",
         user_name : document.getElementById("username").value,
         user_pass : document.getElementById("password").value
     };
