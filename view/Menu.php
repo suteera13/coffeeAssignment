@@ -35,6 +35,8 @@
                     <th style="width:23%">Bath</th>
                 </tr>
             </table>
+            <button>Reset</button>
+            <button>Buy</button>
         </div>
     </div>
     <script src="js/"></script>
