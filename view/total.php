@@ -12,7 +12,7 @@
 <body>
     <div class="row bg">
         <div class="col-9"><h3>Menu</h3></div> 
-        <div class="col-3"><a href="listorder.php">list order</a></div> 
+        <div class="col-3"></div> 
         <div class="col-12">
             <table>
                 <tr>
@@ -22,7 +22,7 @@
                 </tr>
                 <tr>
                     <td>Menu</td>
-                    <td><input type="number" min="1" value="0" style="width: 60%"></td>
+                    <td>0</td>
                     <td>Price</td>
                 </tr>
             </table>
@@ -35,8 +35,8 @@
                     <th style="width:23%">Bath</th>
                 </tr>
             </table>
-            <button class="w">Reset</button>
-            <button class="b">Buy</button>
+            <button class="w">Cancel</button>
+            <button class="b">Confirm</button>
         </div>
     </div>
     <script src="js/"></script>
