@@ -13,11 +13,25 @@
         if($status==1){
             echo json_encode(["status"=>"ok", "message"=>"welcome to coffee site"]);
             $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
+            $link = "http://localhost/coffeeAssignment/view/menu.php";
+            link($link, "link");
         }else{
             echo json_encode(["status"=>"error", "message"=>"login fail"]);
         }
     }
     else if($_GET["ac"]==1){
         echo "signin\n";
+        $user = $arr["user_name"];
+        $pass = $arr["user_pass"];
+        echo "user: ".$user." pass: ".$pass;
+        $status = $clCon->addUser($user,$pass);
+        if($status==1){
+            echo json_encode(["status"=>"ok", "message"=>"welcome to coffee site"]);
+            $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
+            $link = "http://localhost/coffeeAssignment/view/menu.php";
+            link($link, "link");
+        }else{
+            echo json_encode(["status"=>"error", "message"=>"login fail"]);
+        }
     }
 ?>
