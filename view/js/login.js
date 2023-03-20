@@ -47,5 +47,4 @@ async function signupClick(){
     }else{
         alert("The passwords do not match.");
     }
-    
 }

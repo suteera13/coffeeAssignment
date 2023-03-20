@@ -1,3 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script type="text/JavaScript">
+    function goto(url) {
+        location.href = url;
+    }
+</script>
 <?php
     session_start();
     include_once 'class.php';
@@ -13,8 +27,9 @@
         if($status==1){
             echo json_encode(["status"=>"ok", "message"=>"welcome to coffee site"]);
             $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
-            $link = "http://localhost/coffeeAssignment/view/menu.php";
-            link($link, "link");
+            echo "<script type='text/JavaScript'>";
+            echo "goto('http://localhost/coffeeAssignment/view/Menu.php');";
+            echo "</script>";
         }else{
             echo json_encode(["status"=>"error", "message"=>"login fail"]);
         }
@@ -26,12 +41,13 @@
         echo "user: ".$user." pass: ".$pass;
         $status = $clCon->addUser($user,$pass);
         if($status==1){
-            echo json_encode(["status"=>"ok", "message"=>"welcome to coffee site"]);
+            echo json_encode(["status"=>"ok", "message"=>"loading login"]);
             $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
-            $link = "http://localhost/coffeeAssignment/view/menu.php";
-            link($link, "link");
+            
         }else{
-            echo json_encode(["status"=>"error", "message"=>"login fail"]);
+            echo json_encode(["status"=>"error", "message"=>"signup fail"]);
         }
     }
 ?>
+</body>
+</html>
