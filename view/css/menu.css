@@ -17,3 +17,28 @@ td, th {
 tr:nth-child(even) {
     background-color: #f2f2f2;
 }
+button{
+    width: 49%;
+    margin: 3px;
+    padding: 5px;
+}
+.b{
+    background: #41250d;
+    color: #fff;
+    border: solid #41250d;
+    border-radius: 8px;
+}
+.b:hover{
+    background: #fff;
+    color: #41250d;
+}
+.w{
+    background: #fff;
+    border: solid #9b8470;
+    color: #856e5a;
+    border-radius: 8px;
+}
+.w:hover{
+    background: #9b8470;
+    color: #fff;
+}
