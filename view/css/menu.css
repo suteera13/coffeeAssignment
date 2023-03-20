@@ -1,0 +1,19 @@
+body{
+    margin: auto;
+    padding: 5%;
+    background: #f2f2f2;
+}
+.bg{
+    background: #fff;
+    padding: 3%;
+}
+table{
+    width: 100%;
+}
+td, th {
+    text-align: left;
+    padding: 1%;
+}
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
