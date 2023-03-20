@@ -14,8 +14,6 @@ async function loginClick(){
             const message = "Error with status code : "+ response.status;
             throw new Error(message);
         }
-        const data = await response.text();
-        console.log(data);
     }catch(er){
         console.log("Error : "+ er);
     }
@@ -48,3 +46,6 @@ async function signupClick(){
         alert("The passwords do not match.");
     }
 }
+// function goto(url) {
+//     window.location.assign(url);
+// }
