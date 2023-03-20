@@ -12,7 +12,7 @@
 <body>
     <div class="row bg">
         <div class="col-9"><h3>Menu</h3></div> 
-        <div class="col-3"><a href="list order">list order</a></div> 
+        <div class="col-3"><a href="listorder.php">list order</a></div> 
         <div class="col-12">
             <table>
                 <tr>
