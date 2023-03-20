@@ -26,8 +26,8 @@
                     <td>Price</td>
                 </tr>
             </table>
-        </div>
-        <div class="col-12">
+        <!-- </div>
+        <div class="col-12"> -->
             <table>
                 <tr>
                     <th>Total</th>
