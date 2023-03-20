@@ -1,8 +1,6 @@
 <script>
-    function goto(){
-        setInterval(() => {
-            window.location.href = "../view/Menu.php";
-        }, 1000);
+    function goto(url){
+        window.location.href = url;
     }
 </script>
 <?php
@@ -12,26 +10,43 @@
 
     print_r($_POST);
     if($_GET["ac"]==0){
-        echo "login\n";
-        // echo "<script>goto()</script>";
-        // // $user = $arr["user_name"];
-        // // $pass = $arr["user_pass"];
-        // echo "user: ".$user."\npass: ".$pass."\n";
-        // $status = $clCon->checkUser($user,$pass);
-        // if($status==1){
-        //     $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
-        // }else{
-        // }
+        echo "<script>console.log('login')</script>";
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        
+        if($user != "" && $pass != ""){
+            $status = $clCon->checkUser($user,$pass);
+            if($status==1){
+                $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
+                echo "<script>goto('../view/Menu.php')</script>";
+            }else{
+                echo "<script>alert('No data found.');goto('../view')</script>";
+            }
+        }else{
+            echo "<script>alert('Please enter your user name and password.');goto('../view')</script>";
+        }
     }
-    // else if($_GET["ac"]==1){
-    //     echo "signin\n";
-    //     $user = $arr["user_name"];
-    //     $pass = $arr["user_pass"];
-    //     echo "user: ".$user." pass: ".$pass;
-    //     $status = $clCon->addUser($user,$pass);
-    //     if($status==1){
-            
-    //     }else{
-    //     }
-    // }
+    else if($_GET["ac"]==1){
+        echo "<script>console.log('sigup')</script>";
+        $user = $_POST['username'];
+        $pass = $_POST['password'];
+        $confirm = $_POST['confirm'];
+        if($user != "" && $pass != "" && $confirm != ""){
+            $status = $clCon->addUser($user,$pass);
+            if($status==1){
+                $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
+                echo "<script>goto('../view')</script>";
+            }else{
+                echo "<script>alert('No data found.');goto('../view/Signup.html')</script>";
+            }
+        }
+        else{
+            if ($user == "" && $pass == "") {
+                echo "<script>alert('Please enter your user name and password.')</script>";
+            }else{
+                echo "<script>alert('Please confirm password.')</script>";
+            }
+            echo "<script>goto('../view/Signup.html')</script>";
+        }
+    }
 ?>

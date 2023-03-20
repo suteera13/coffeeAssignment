@@ -11,20 +11,20 @@
 <body>
     <div class="row">
         <div class="col-6 divBlan"></div>
-        <div class="col-6 divLog">
+        <form class="col-6 divLog" action="../api/controls.php?ac=1" method="post">
             <center>
                 <h2>SignUp</h2><hr>
             </center>
             Name
-            <input type="text" id="username">
+            <input type="text" name="username">
             Password
-            <input type="password" id="password">
+            <input type="password" name="password">
             Confirm password
-            <input type="password" id="confirm">
-            <button class="yes" onclick="signupClick()">SignUp</button>
+            <input type="password" name="confirm">
+            <button class="yes" type="submit">SignUp</button>
             <a href="index.html"><button class="no">Login</button></a>
-        </div>
+        </form>
     </div>
-    <script src="js/login.js"></script>
+    <!-- <script src="js/login.js"></script> -->
 </body>
 </html>
