@@ -30,7 +30,7 @@
             }
         }
         public function showMenu(){
-            $sql = "SELECT menu_name, menu_price FROM menu";
+            $sql = "SELECT * FROM menu";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
     }

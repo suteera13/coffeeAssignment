@@ -1,5 +1,6 @@
-<?php 
-    session_start(); 
+<?php
+    include_once '../api/controls.php';
+    $munuTable = $clCon->showMenu();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -28,17 +29,15 @@
                     <th style="width:23%">Order Amount</th>
                     <th style="width:23%">Price</th>
                 </tr>
-                <?php 
-                    include_once '../api/class.php';
-                    $clCon = new control();
-                    $show = $clCon->showMenu();
+                <?php
+                    foreach ($munuTable as $value) {
                 ?>
                 <tr>
-                    <td><?php echo $resul["menu_name"]; ?></td>
-                    <td><input type="number" min="1" value="0" style="width: 60%"></td>
-                    <td><?php echo $resul["price"]; ?></td>
+                    <th id="menu_name"><?= $value["menu_name"] ?></th>
+                    <th><input type="number" id="order_amount"></th>
+                    <th id="menu_price"><?= $value["menu_price"] ?></th>
                 </tr>
-                <?php ?>
+                <?php } ?>
             </table>
         <!-- </div>
         <div class="col-12"> -->

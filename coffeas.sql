@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 20, 2023 at 03:53 PM
+-- Generation Time: Mar 21, 2023 at 12:47 PM
 -- Server version: 10.4.25-MariaDB
 -- PHP Version: 8.1.10
 
@@ -64,7 +64,12 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`user_id`, `user_name`, `user_pass`) VALUES
-(1, 'admin', '1234');
+(1, 'admin', '1234'),
+(2, 'user1', '1234'),
+(3, 'user2', '4321'),
+(4, 'user3', '1234'),
+(5, 'user4', '4321'),
+(6, 'user5', '1234');
 
 --
 -- Indexes for dumped tables
@@ -108,7 +113,7 @@ ALTER TABLE `order`
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
