@@ -43,3 +43,7 @@ button{
 .r{
     text-align: right;
 }
+input{
+    margin: 3px;
+    width: 80%;
+}
