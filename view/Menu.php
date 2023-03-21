@@ -1,6 +1,7 @@
 <?php
     include_once '../api/controls.php';
     $munuTable = $clCon->showMenu();
+    if(isset($_SESSION['userses'])){
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@
 <body>
     <div class="r">
         <p>
-            Username | <a href="logout.php">Logout</a>
+            <?php echo $_SESSION['userses']['user'] ?> | <a href="logout.php">Logout</a>
         </p>
     </div>
     <div class="row bg">
@@ -56,3 +57,4 @@
     </div>
 </body>
 </html>
+<?php } ?>
