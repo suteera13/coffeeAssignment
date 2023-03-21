@@ -1,6 +1,5 @@
 <?php
     session_start();
-    print_r($_POST);
 
     include_once '../api/class.php';
     $clCon = new control();
