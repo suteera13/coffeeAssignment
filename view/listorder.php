@@ -44,6 +44,5 @@
             </table>
         </div>
     </div>
-    <script src="js/"></script>
 </body>
 </html>

@@ -44,6 +44,5 @@
             <button class="b">Confirm</button>
         </div>
     </div>
-    <script src="js/"></script>
 </body>
 </html>

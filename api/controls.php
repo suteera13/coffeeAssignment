@@ -54,4 +54,5 @@
             echo "<script>goto('../view/Signup.html')</script>";
         }
     }
+    
 ?>

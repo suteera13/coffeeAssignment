@@ -1,3 +1,6 @@
+<?php 
+    session_start(); 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,11 +28,17 @@
                     <th style="width:23%">Order Amount</th>
                     <th style="width:23%">Price</th>
                 </tr>
+                <?php 
+                    include_once '../api/class.php';
+                    $clCon = new control();
+                    $show = $clCon->showMenu();
+                ?>
                 <tr>
-                    <td>Menu</td>
+                    <td><?php echo $resul["menu_name"]; ?></td>
                     <td><input type="number" min="1" value="0" style="width: 60%"></td>
-                    <td>Price</td>
+                    <td><?php echo $resul["price"]; ?></td>
                 </tr>
+                <?php ?>
             </table>
         <!-- </div>
         <div class="col-12"> -->

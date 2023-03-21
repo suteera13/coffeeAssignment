@@ -23,6 +23,7 @@
                 return 1;
             }
         }
+<<<<<<< HEAD
         public function buyOrder($user, $menu, $order){
             $sql = "INSERT INTO `order`(`user_id`, `menu_id`, `order_amount`) VALUES ()";
             $stmt = $this->db->prepare($sql);
@@ -33,6 +34,12 @@
             if($stmt->rowCount() == 1){
                 return 1;
             }
+=======
+        public function showMenu(){
+            $sql = "SELECT `menu_name`, `menu_price` FROM `menu`";
+            $stmt = $this->db->query($sql);
+            // return $stmt;
+>>>>>>> d680555b6032f5b492ba10a54124d7260edc7931
         }
     }
 ?>

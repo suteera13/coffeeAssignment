@@ -1,4 +1,7 @@
-<center>
-    <br><br>
-    <h2>Logouting 2 second ...</h2>  
-</center>
+<script>
+    function goto(url){
+        window.location.href = url;
+}
+</script>
+<?php
+echo "<script>alert('logout?');goto('../view')</script>";
