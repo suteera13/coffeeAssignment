@@ -31,17 +31,17 @@
                     <th style="width:23%">Order Amount</th>
                     <th style="width:23%">Price</th>
                 </tr>
+                <?php
+                    foreach ($_POST as $key => $value) {
+                        if($value != ""){
+                            $price = $clCon->checkPrice($key);
+                ?>
                 <tr>
-                    <?php
-                        foreach ($_POST as $key => $value) {
-                            if($value != ""){
-                                $price = $clCon->checkPrice($key);
-                    ?>
                     <td><?= $price[0]['menu_name']; ?></td>
                     <td><?= $value; ?></td>
                     <td><?= $price[0]['menu_price']; ?></td>
-                    <?php }} ?>
                 </tr>
+                <?php }} ?>
             </table>
         <!-- </div>
         <div class="col-12"> -->
