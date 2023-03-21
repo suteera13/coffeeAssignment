@@ -32,11 +32,14 @@
                     include_once '../api/class.php';
                     $clCon = new control();
                     $show = $clCon->showMenu();
+                    // $menu_name = $show['menu_name'];
+                    // $price = $show['price'];
+                    print_r($show);
                 ?>
                 <tr>
-                    <td><?php echo $resul["menu_name"]; ?></td>
+                    <!-- <td><?php echo $menu_name; ?></td>
                     <td><input type="number" min="1" value="0" style="width: 60%"></td>
-                    <td><?php echo $resul["price"]; ?></td>
+                    <td><?php echo $price; ?></td> -->
                 </tr>
                 <?php ?>
             </table>
