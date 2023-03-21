@@ -24,7 +24,7 @@
             echo $user_id ;
             if($user_id!=0){
                 $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
-                // echo "<script>goto('../view/Menu.php')</script>";
+                echo "<script>goto('../view/Menu.php')</script>";
             }else{
                 echo "<script>alert('No data found.');goto('../view')</script>";
             }

@@ -28,10 +28,10 @@
             if($stmt->rowCount() == 1){
                 return 1;
             }
+        }
         public function showMenu(){
-            $sql = "SELECT `menu_name`, `menu_price` FROM `menu`";
-            $stmt = $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
-            // return $stmt;
+            $sql = "SELECT menu_name, menu_price FROM menu";
+            return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
     }
 ?>
