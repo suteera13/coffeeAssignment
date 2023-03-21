@@ -16,8 +16,8 @@
         </p>
     </div>
     <div class="row bg">
-        <div class="col-10"><h3>Menu</h3></div> 
-        <div class="col-2"><a href="Menu.php">Menu</a></div> 
+        <div class="col-10"><h3>List Order</h3></div> 
+        <div class="col-2 r"><a href="Menu.php">Menu</a></div> 
         <div class="col-12">
             <table>
                 <tr>
