@@ -34,7 +34,6 @@
         if($user != "" && $pass != "" && $confirm != ""){
             $status = $clCon->addUser($user,$pass);
             if($status==1){
-                $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
                 echo "<script>goto('../view')</script>";
             }else{
                 echo "<script>alert('No data found.');goto('../view/Signup.html')</script>";
