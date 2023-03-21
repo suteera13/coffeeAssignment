@@ -1,5 +1,8 @@
 <script>
     alert('logout?');
+    function logout(){
+        alert('logout?');
+    }
     function goto(url){
         window.location.href = url;
     }

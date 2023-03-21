@@ -2,6 +2,9 @@
     function goto(url){
         window.location.href = url;
     }
+    function printSc(txt){
+        console.log(txt);
+    }
 </script>
 <?php
     session_start();
