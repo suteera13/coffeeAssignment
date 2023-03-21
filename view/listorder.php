@@ -1,3 +1,8 @@
+<?php
+    include_once '../api/controls.php';
+    $orderTable = $clCon->showlistOrder();
+    if(isset($_SESSION['userses'])){
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,19 +31,26 @@
                     <th style="width:20%">Price</th>
                     <th style="width:20%"></th>
                 </tr>
+                <?php
+                    $total = 0;
+                    foreach ($orderTable as $value) {
+                        $total += $value['order_amount']*$value['menu_price'];
+                ?>
                 <tr>
-                    <td>Menu</td>
-                    <td>0</td>
-                    <td>Price</td>
+                    <td><?= $value['menu_name'] ?></td>
+                    <td><?= $value['order_amount'] ?></td>
+                    <td><?= $value['menu_price'] ?></td>
                     <td><button class="b">Cancel</button></td>
+                    
                 </tr>
+                <?php } ?>
             </table>
         <!-- </div>
         <div class="col-12"> -->
             <table>
                 <tr style="color:red;">
                     <th>Total</th>
-                    <th style="width:22%">0</th>
+                    <th style="width:22%"><?= $total ?></th>
                     <th style="width:18%">Bath</th>
                 </tr>
             </table>
@@ -46,3 +58,7 @@
     </div>
 </body>
 </html>
+<?php }else{
+    echo "<script>alert('Please login.')</script>";
+    echo "<script>goto('index.html')</script>";
+} ?>

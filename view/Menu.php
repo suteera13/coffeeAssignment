@@ -3,6 +3,7 @@
     $munuTable = $clCon->showMenu();
     if(isset($_SESSION['userses'])){
 ?>
+<script src="https://unpkg.com/jquery@3.3.1/dist/jquery.min.js"></script>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -34,25 +35,20 @@
                     <?php
                         foreach ($munuTable as $value) {
                     ?>
+                    
                     <tr>
                         <th><?= $value["menu_name"] ?></th>
-                        <th><input type="number" name="<?= $value["menu_id"] ?>"></th>
-                        <th><?= $value["menu_price"] ?></th>
+                        <th>
+                            <input type="number" name="<?= $value["menu_id"] ?>" id="<?= $value["menu_id"] ?>">
+                        </th>
+                        <th id="price"><?= $value["menu_price"] ?></th>
                     </tr>
+                    
                     <?php } ?>
                 </table>
-            <!-- </div>
-            <div class="col-12"> -->
-                <table>
-                    <tr style="color:red;">
-                        <th>Total</th>
-                        <th style="width:23%">0</th>
-                        <th style="width:23%">Bath</th>
-                    </tr>
-                </table>
                 <center>
-                    <button class="w">Reset</button>
-                    <button class="b">Buy</button>
+                    <button class="w" type="reset">Reset</button>
+                    <button class="b" type="submit">Buy</button>
                 </center>                
             </form>
         </div>

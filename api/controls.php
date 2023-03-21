@@ -33,7 +33,7 @@
             }
         }
         elseif($_GET["ac"]==1){
-            echo "<script>console.log('sigup')</script>";
+            echo "<script>console.log('signup')</script>";
             $user = $_POST['username'];
             $pass = $_POST['password'];
             $confirm = $_POST['confirm'];
@@ -55,8 +55,29 @@
             }
         }
         elseif($_GET["ac"]==2){
-            
+            echo "<script>console.log('buy order')</script>";
+            echo "<pre>";
+            print_r($_POST);
+            echo "</pre>";
+            $menu_id; $order_amount;
+            foreach ($_POST as $key => $value) {
+                for($i = 0; $i < 10; $i++){
+                    $menuid = "menu".$i;
+                    $amount = "amount".$i;
+                    if($key == $menuid){
+                        echo $menuid."<br>";
+                        $menu_id[$i] = $value;
+                    }
+                    if($key == $amount){
+                        echo $amount."<br>";
+                        $order_amount[$i] = $value;
+                    }
+                }
+            }
+            foreach ($menu_id as $key => $value) {
+                $clCon->buyOrder($_SESSION['userses']['id'],$menu_id[$key],$order_amount[$key]);
+            }
+            echo "<script>goto('../view/listorder.php')</script>";
         }
     }
-    
 ?>

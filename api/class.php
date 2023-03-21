@@ -42,5 +42,9 @@
             $sql = "SELECT menu_name, menu_price FROM menu WHERE menu_id = {$id}";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
+        public function showlistOrder(){
+            $sql = "SELECT * FROM `order`,`menu`";
+            return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
+        }
     }
 ?>
