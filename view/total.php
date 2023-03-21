@@ -53,7 +53,10 @@
                 </tr>
             </table>
             <button class="w">Cancel</button>
-            <button class="b">Confirm</button>
+            <form action="../api/controls.php?ac=2" method="post">
+                <input type="hidden" name="">
+                <button class="b">Confirm</button>
+            </form>
         </div>
     </div>
 </body>

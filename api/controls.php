@@ -54,6 +54,9 @@
                 echo "<script>goto('../view/Signup.html')</script>";
             }
         }
+        elseif($_GET["ac"]==2){
+            
+        }
     }
     
 ?>
