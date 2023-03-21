@@ -52,7 +52,7 @@
                     <th style="width:23%">Bath</th>
                 </tr>
             </table>
-            <button class="w">Cancel</button>
+            <a href="Menu.php"><button class="w">Cancel</button></a>
             <button class="b">Confirm</button>
         </div>
     </div>
