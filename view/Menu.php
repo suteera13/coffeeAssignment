@@ -35,9 +35,11 @@
                         foreach ($munuTable as $value) {
                     ?>
                     <tr>
-                        <th id="menu_name"><?= $value["menu_name"] ?></th>
-                        <th><input type="number" id="order_amount"></th>
-                        <th id="menu_price"><?= $value["menu_price"] ?></th>
+                        <form action="../api/controls.php?ac=2" method="post">
+                        <th><?= $value["menu_name"] ?></th>
+                        <th><input type="number" id="<?= $value["menu_id"] ?>"></th>
+                        <th><?= $value["menu_price"] ?></th>
+                        
                     </tr>
                     <?php } ?>
                 </table>
@@ -52,7 +54,8 @@
                 </table>
                 <center>
                     <button class="w">Reset</button>
-                    <button class="b">Buy</button>                
+                    <button class="b">Buy</button>
+                        </form>
                 </center>                
             </form>
         </div>
@@ -60,3 +63,8 @@
 </body>
 </html>
 <?php } ?>
+<script>
+    function buyClick(){
+        doc
+    }
+</script>

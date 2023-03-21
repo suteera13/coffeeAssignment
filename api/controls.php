@@ -2,9 +2,6 @@
     function goto(url){
         window.location.href = url;
     }
-    function printSc(txt){
-        console.log(txt);
-    }
 </script>
 <?php
     session_start();
@@ -35,7 +32,7 @@
                 echo "<script>alert('Please enter your user name and password.');goto('../view')</script>";
             }
         }
-        else if($_GET["ac"]==1){
+        elseif($_GET["ac"]==1){
             echo "<script>console.log('sigup')</script>";
             $user = $_POST['username'];
             $pass = $_POST['password'];
@@ -57,9 +54,9 @@
                 echo "<script>goto('../view/Signup.html')</script>";
             }
         }
+        elseif ($_GET["ac"]==2) {
+            print_r($_POST);
+        }
     }
     
 ?>
-<script>
-
-</script>
