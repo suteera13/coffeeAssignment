@@ -38,5 +38,9 @@
             $sql = "SELECT * FROM menu";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
+        public function checkPrice($id){
+            $sql = "SELECT menu_name, menu_price FROM menu WHERE menu_id = {$id}";
+            return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
+        }
     }
 ?>

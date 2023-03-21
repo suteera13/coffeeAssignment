@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    print_r($_POST);
+
+    include_once '../api/class.php';
+    $clCon = new control();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,7 +19,7 @@
 <body>
     <div class="r">
         <p>
-            Username | <a href="logout.php">Logout</a>
+        <?php echo $_SESSION['userses']['user'] ?> | <a href="logout.php">Logout</a>
         </p>
     </div>
     <div class="row bg">
@@ -26,9 +33,15 @@
                     <th style="width:23%">Price</th>
                 </tr>
                 <tr>
-                    <td>Menu</td>
-                    <td>0</td>
-                    <td>Price</td>
+                    <?php
+                        foreach ($_POST as $key => $value) {
+                            if($value != ""){
+                                $price = $clCon->checkPrice($key);
+                    ?>
+                    <td><?= $price[0]['menu_name']; ?></td>
+                    <td><?= $value; ?></td>
+                    <td><?= $price[0]['menu_price']; ?></td>
+                    <?php }} ?>
                 </tr>
             </table>
         <!-- </div>

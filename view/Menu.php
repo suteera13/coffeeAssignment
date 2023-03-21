@@ -24,7 +24,7 @@
         <div class="col-10"><h3>Menu</h3></div> 
         <div class="col-2 r"><a href="listorder.php">list order</a></div> 
         <div class="col-12">
-            <form action="../api/controls.php?ac=2" method="post">
+            <form action="total.php" method="post">
                 <table>
                     <tr>
                         <th>Menu Name</th>
@@ -38,7 +38,6 @@
                         <th><?= $value["menu_name"] ?></th>
                         <th><input type="number" name="<?= $value["menu_id"] ?>"></th>
                         <th><?= $value["menu_price"] ?></th>
-                        
                     </tr>
                     <?php } ?>
                 </table>
@@ -60,9 +59,7 @@
     </div>
 </body>
 </html>
-<?php } ?>
-<script>
-    function buyClick(){
-        doc
-    }
-</script>
+<?php 
+}else{
+    echo "<script>goto('../view')</script>";
+} ?>

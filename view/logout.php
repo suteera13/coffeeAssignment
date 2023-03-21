@@ -9,6 +9,6 @@
 </script>
 <?php
     session_start();
-    $_SESSION[] = [];
+    session_unset();
     echo "<script>goto('../view')</script>";
 ?>
