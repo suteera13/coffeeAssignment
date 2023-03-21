@@ -10,6 +10,11 @@
     <title>SignUp</title>
 </head>
 <body>
+    <div class="r">
+        <p>
+            Username | <a href="logout.php">Logout</a>
+        </p>
+    </div>
     <div class="row bg">
         <div class="col-9"><h3>Menu</h3></div> 
         <div class="col-3"><a href="listorder.php">list order</a></div> 
@@ -35,8 +40,11 @@
                     <th style="width:23%">Bath</th>
                 </tr>
             </table>
-            <button class="w">Reset</button>
-            <button class="b">Buy</button>
+            <center>
+                <button class="w">Reset</button>
+                <button class="b">Buy</button>                
+            </center>
+
         </div>
     </div>
 </body>

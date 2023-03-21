@@ -19,8 +19,6 @@ tr:nth-child(even) {
 }
 button{
     width: 49%;
-    margin: 3px;
-    padding: 5px;
 }
 .b{
     background: #41250d;
@@ -41,4 +39,7 @@ button{
 .w:hover{
     background: #9b8470;
     color: #fff;
+}
+.r{
+    text-align: right;
 }

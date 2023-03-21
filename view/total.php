@@ -10,6 +10,11 @@
     <title>SignUp</title>
 </head>
 <body>
+    <div class="r">
+        <p>
+            Username | <a href="logout.php">Logout</a>
+        </p>
+    </div>
     <div class="row bg">
         <div class="col-9"><h3>Menu</h3></div> 
         <div class="col-3"></div> 

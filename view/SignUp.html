@@ -11,19 +11,21 @@
 <body>
     <div class="row">
         <div class="col-6 divBlan"></div>
-        <form class="col-6 divLog" action="../api/controls.php?ac=1" method="post">
-            <center>
-                <h2>SignUp</h2><hr>
-            </center>
-            Name
-            <input type="text" name="username">
-            Password
-            <input type="password" name="password">
-            Confirm password
-            <input type="password" name="confirm">
-            <button class="yes" type="submit">SignUp</button>
-        </form>
-        <a href="index.html"><button class="no">Login</button></a>
+        <div class="col-6 divLog">
+            <form action="../api/controls.php?ac=1" method="post">
+                <center>
+                    <h2>SignUp</h2><hr>
+                </center>
+                Name
+                <input type="text" name="username">
+                Password
+                <input type="password" name="password">
+                Confirm password
+                <input type="password" name="confirm">
+                <button class="yes" type="submit">SignUp</button>
+            </form>
+            <a href="index.html"><button class="no">Login</button></a>
+        </div>
     </div>
 </body>
 </html>
