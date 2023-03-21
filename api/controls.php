@@ -16,9 +16,15 @@
         
         if($user != "" && $pass != ""){
             $status = $clCon->checkUser($user,$pass);
-            if($status==1){
+            $arr = $status[0];
+            $user_id;
+            foreach ($arr as $key => $value) {
+                $user_id = $value;
+            }
+            echo $user_id ;
+            if($user_id!=0){
                 $_SESSION['userses'] = ["user"=>$user,"pass"=>$pass];
-                echo "<script>goto('../view/Menu.php')</script>";
+                // echo "<script>goto('../view/Menu.php')</script>";
             }else{
                 echo "<script>alert('No data found.');goto('../view')</script>";
             }

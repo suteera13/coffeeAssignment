@@ -44,7 +44,6 @@
                 <button class="w">Reset</button>
                 <button class="b">Buy</button>                
             </center>
-
         </div>
     </div>
 </body>
