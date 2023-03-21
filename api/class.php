@@ -25,8 +25,10 @@
             }
         }
         public function showMenu(){
-            $sql = "SELECT `menu_id`, `menu_name`, `menu_price` FROM `menu`";
+            $sql = "SELECT `menu_name`, `menu_price` FROM `menu`";
             $stmt = $this->db->query($sql);
+            // return $stmt;
         }
     }
 ?>
+<!-- `menu_id`,  -->
