@@ -29,6 +29,11 @@
                 return 1;
             }
         }
+        public function delOrder($id){
+            $sql = "DELETE FROM `order` WHERE `order_id`= $id";
+            $stmt = $this->db->prepare($sql);
+            $stmt->execute();
+        }
         public function showMenu(){
             $sql = "SELECT * FROM menu";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
