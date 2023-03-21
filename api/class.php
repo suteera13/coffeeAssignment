@@ -19,10 +19,10 @@
             }
         }
         public function buyOrder($user, $menu, $order){
-            $sql = "INSERT INTO `order`(`user_id`, `menu_id`, `order_amount`) VALUES ()";
+            $sql = "INSERT INTO `order`(`user_id`, `menu_id`, `order_amount`) VALUES (:user, :menu, :order)";
             $stmt = $this->db->prepare($sql);
-            $stmt->bindParam(':user', $user_id , PDO::PARAM_STR);
-            $stmt->bindParam(':menu', $menu_id , PDO::PARAM_STR);
+            $stmt->bindParam(':user', $user , PDO::PARAM_STR);
+            $stmt->bindParam(':menu', $menu , PDO::PARAM_STR);
             $stmt->bindParam(':order', $order , PDO::PARAM_STR);
             $stmt->execute();
             if($stmt->rowCount() == 1){
