@@ -24,7 +24,7 @@
         <div class="col-10"><h3>Menu</h3></div> 
         <div class="col-2 r"><a href="listorder.php">list order</a></div> 
         <div class="col-12">
-            <form>
+            <form action="../api/controls.php?ac=2" method="post">
                 <table>
                     <tr>
                         <th>Menu Name</th>
@@ -35,9 +35,8 @@
                         foreach ($munuTable as $value) {
                     ?>
                     <tr>
-                        <form action="../api/controls.php?ac=2" method="post">
                         <th><?= $value["menu_name"] ?></th>
-                        <th><input type="number" id="<?= $value["menu_id"] ?>"></th>
+                        <th><input type="number" name="<?= $value["menu_id"] ?>"></th>
                         <th><?= $value["menu_price"] ?></th>
                         
                     </tr>
@@ -55,7 +54,6 @@
                 <center>
                     <button class="w">Reset</button>
                     <button class="b">Buy</button>
-                        </form>
                 </center>                
             </form>
         </div>
