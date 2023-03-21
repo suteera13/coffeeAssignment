@@ -24,5 +24,9 @@
                 return 1;
             }
         }
+        public function showMenu(){
+            $sql = "SELECT * FROM `menu`";
+            $stmt = $this->db->query($sql);
+        }
     }
 ?>

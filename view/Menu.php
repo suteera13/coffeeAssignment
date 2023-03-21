@@ -25,11 +25,16 @@
                     <th style="width:23%">Order Amount</th>
                     <th style="width:23%">Price</th>
                 </tr>
+                <?php
+                    include_once 'class.php';
+                    while($row = mysqli_fetch_array($stmt)){                 
+                ?>
                 <tr>
-                    <td>Menu</td>
+                    <td><?php $row["menu_name"] ?></td>
                     <td><input type="number" min="1" value="0" style="width: 60%"></td>
                     <td>Price</td>
                 </tr>
+                <?php } ?>
             </table>
         <!-- </div>
         <div class="col-12"> -->
@@ -44,7 +49,6 @@
                 <button class="w">Reset</button>
                 <button class="b">Buy</button>                
             </center>
-
         </div>
     </div>
 </body>
