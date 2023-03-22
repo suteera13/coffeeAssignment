@@ -17,7 +17,7 @@
 <body>
 <div class="row">
     <div class="left bgBar">
-        <h2>Menu</h2>
+        <h2>List Order</h2><hr>
         <ul id="myMenu">
         <li><a href="Menu.php">Menu</a></li>
         <li><a href="logout.php">Logout</a></li>
