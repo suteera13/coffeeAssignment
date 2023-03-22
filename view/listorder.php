@@ -52,8 +52,9 @@
                         <td><?= $value['menu_price'] ?></td>                 
                         <td>
                             <input type="hidden" name="order_id" value="<?= $value['order_id'] ?>">
-                            <button class="w" type="submit">Edit</button>
-                            <button class="b" type="submit">Cancel</button>
+                            <input type="hidden" name="order_amount" value="<?= $value['order_amount'] ?>">
+                            <button class="w" type="submit" name="Edit">Edit</button>
+                            <button class="b" type="submit" name="Cancel">Cancel</button>
                         </td>
                         
                     </tr>
