@@ -62,7 +62,7 @@
                 </tr>
             </table>
 
-            <center>
+            <div class="fr col-6">
                 <form action="../api/controls.php?ac=2" method="post">
                     <?php 
                         foreach ($_POST as $key => $value) {
@@ -71,7 +71,7 @@
                     <?php } ?>
                     <button class="b" type="submit">Confirm</button>
                 </form>
-            </center>
+            </div>
 
         </div>
     </div>
