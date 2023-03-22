@@ -79,7 +79,11 @@
             print_r($_POST);
             echo $_POST['order_id'];
             if(isset($_POST['Edit'])){
-                $clCon->editOrder($_POST['order_id'],$_POST['order_amount']);
+                if($_POST['order_amount']==0){
+                    $clCon->delOrder($_POST['order_id']);
+                }else{
+                    $clCon->editOrder($_POST['order_id'],$_POST['order_amount']);
+                }
             }
             if(isset($_POST['Cancel'])){
                 $clCon->delOrder($_POST['order_id']);

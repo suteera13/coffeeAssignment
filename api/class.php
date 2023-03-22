@@ -30,7 +30,7 @@
             }
         }
         public function editOrder($id, $amount){
-            $sql = "UPDATE `order` SET `order_amount`= {$amount} WHERE 	order_id = {$id}";
+            $sql = "UPDATE `order` SET `order_amount`= {$amount} WHERE	order_id = {$id}";
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
         }
@@ -48,7 +48,7 @@
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
         public function showlistOrder($id){
-            $sql = "SELECT * FROM `order`,`menu` WHERE order.user_id = {$id} and order.menu_id = menu.menu_id";
+            $sql = "SELECT * FROM `order`,`menu` WHERE order.user_id = {$id} and order.menu_id = menu.menu_id ORDER BY order.order_id";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
         

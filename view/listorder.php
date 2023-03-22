@@ -39,27 +39,26 @@
                     <th style="width:20%">Price</th>
                     <th style="width:20%"></th>
                 </tr>
+                <?php
+                    $total = 0;
+                    $order = $clCon->showlistOrder($_SESSION['userses']['id']);
+                    foreach ($order as $value) {
+                        $total += $value['order_amount']*$value['menu_price'];
+                ?>
                 <form action="../api/controls.php?ac=3" method="post">
-                    <?php
-                        $total = 0;
-                        $order = $clCon->showlistOrder($_SESSION['userses']['id']);
-                        foreach ($order as $value) {
-                            $total += $value['order_amount']*$value['menu_price'];
-                    ?>
                     <tr>
-<!-- edit del------------------------------------------------------------- -->
+<!-- edit del------------------------------------------------------------ -->
                         <td><?= $value['menu_name'] ?></td>
-                        <td><input type="number" value="<?= $value['order_amount'] ?>"></td>
-                        <td><?= $value['menu_price'] ?></td>                 
+                        <td><input type="number" name="order_amount" value="<?= $value['order_amount'] ?>"></td>
+                        <td><?= $value['menu_price'] ?></td>
                         <td>
                             <input type="hidden" name="order_id" value="<?= $value['order_id'] ?>">
-                            <input type="hidden" name="order_amount" value="<?= $value['order_amount'] ?>">
-                            <button class="w" type="submit" name="Edit">Edit</button>
-                            <button class="b" type="submit" name="Cancel">Cancel</button>
+                            <button class="w" name="Edit">Edit</button>
+                            <button class="b" name="Cancel">Cancel</button>
                         </td>
                     </tr>
-                    <?php } ?>
                 </form>
+                <?php } ?>
             </table>
 
             <table>
