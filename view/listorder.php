@@ -47,8 +47,9 @@
                             $total += $value['order_amount']*$value['menu_price'];
                     ?>
                     <tr>
+<!-- edit del------------------------------------------------------------- -->
                         <td><?= $value['menu_name'] ?></td>
-                        <td><?= $value['order_amount'] ?></td>
+                        <td><input type="number" value="<?= $value['order_amount'] ?>"></td>
                         <td><?= $value['menu_price'] ?></td>                 
                         <td>
                             <input type="hidden" name="order_id" value="<?= $value['order_id'] ?>">
@@ -60,8 +61,7 @@
                     <?php } ?>
                 </form>
             </table>
-        <!-- </div>
-        <div class="col-12"> -->
+
             <table>
                 <tr style="color:red;">
                     <th>Total</th>
