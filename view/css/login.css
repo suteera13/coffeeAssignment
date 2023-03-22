@@ -1,21 +1,23 @@
 body{
-    margin: auto;
-    padding: 2% 3% 0% 3%;
+    margin-top: 0px;
     font-size: 18px;
-    background: #f3f3f3;
+    background: #18110b;
+}
+.row{
+    margin: auto;
+    width: 100%;
 }
 .divBlan{
-    background-image: url('https://images.unsplash.com/photo-1598908314732-07113901949e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80');
+    background-image: url('https://images.unsplash.com/photo-1527678357412-ef45dfbd9ecc?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80');
     background-repeat: no-repeat;
-    background-size: auto 100%;
+    background-size: 100% auto;
     display: inline-block;
-    /* height: 650px;
-    width: 40%; */
     float: left;
 }
 .divLog{
     background-color: #fff;
     padding: 5%;
+    height: 100vh;
 }
 input{
     padding: 3px;

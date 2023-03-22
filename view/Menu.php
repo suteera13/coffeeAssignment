@@ -18,7 +18,7 @@
 </head>
 <body>
 <div class="row">
-  <div class="left" style="background-color:#9b8470; color: #fff;">
+  <div class="left bgBar">
     <h2>Menu</h2>
     <ul id="myMenu">
       <li><a href="listorder.php">list order</a></li>

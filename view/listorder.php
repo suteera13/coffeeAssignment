@@ -16,13 +16,13 @@
 </head>
 <body>
 <div class="row">
-  <div class="left" style="background-color:#9b8470; color: #fff;">
-    <h2>Menu</h2>
-    <ul id="myMenu">
-      <li><a href="Menu.php">Menu</a></li>
-      <li><a href="logout.php">Logout</a></li>
-    </ul>
-  </div>
+    <div class="left bgBar">
+        <h2>Menu</h2>
+        <ul id="myMenu">
+        <li><a href="Menu.php">Menu</a></li>
+        <li><a href="logout.php">Logout</a></li>
+        </ul>
+    </div>
   
   <div class="right" style="background-color:#fff;">
     <div class="r">

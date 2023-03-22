@@ -1,4 +1,7 @@
-
+.bgBar {
+  background-color:#382819; 
+  color: #fff;
+}
 * {
   box-sizing: border-box;
 }
