@@ -68,9 +68,14 @@
         }
         elseif($_GET["ac"]==3){
             echo "<script>console.log('cancel order')</script>";
+            print_r($_POST);
             echo $_POST['order_id'];
-            $status = $clCon->delOrder($_POST['order_id']);
-            echo "<br>status : ".$status;
+            if(isset($_POST['Edit'])){
+                $clCon->editOrder($_POST['order_id'],$_POST['order_amount']);
+            }
+            if(isset($_POST['Cancel'])){
+                $clCon->delOrder($_POST['order_id']);
+            }
             echo "<script>goto('../view/listorder.php')</script>";
         }
     }
