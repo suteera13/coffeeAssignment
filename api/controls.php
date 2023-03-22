@@ -38,17 +38,25 @@
             $pass = $_POST['password'];
             $confirm = $_POST['confirm'];
             if($user != "" && $pass != "" && $confirm != ""){
-                $status = $clCon->addUser($user,$pass);
-                if($status==1){
-                    echo "<script>goto('../view')</script>";
-                }else{
-                    echo "<script>alert('No data found.');goto('../view/Signup.html')</script>";
+                if($confirm != $pass){
+                    echo "<script>alert('Failed to confirm password.')</script>";
+                    echo "<script>goto('../view/Signup.html')</script>";
                 }
+                else{
+                    $status = $clCon->addUser($user,$pass);
+                    if($status==1){
+                        echo "<script>goto('../view')</script>";
+                    }else{
+                        echo "<script>alert('No data found.');goto('../view/Signup.html')</script>";
+                    }
+                }
+                
             }
             else{
                 if ($user == "" && $pass == "") {
                     echo "<script>alert('Please enter your user name and password.')</script>";
-                }else{
+                }
+                else{
                     echo "<script>alert('Please confirm password.')</script>";
                 }
                 echo "<script>goto('../view/Signup.html')</script>";

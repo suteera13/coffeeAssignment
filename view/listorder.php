@@ -57,7 +57,6 @@
                             <button class="w" type="submit" name="Edit">Edit</button>
                             <button class="b" type="submit" name="Cancel">Cancel</button>
                         </td>
-                        
                     </tr>
                     <?php } ?>
                 </form>
