@@ -14,8 +14,7 @@ tr:nth-child(even) {
 }
 button{
     float: right;
-    margin-top: 5%;
-    width: 50%;
+    width: 49%;
 }
 .b{
     background: #41250d;
@@ -45,9 +44,7 @@ input{
     margin: 3px;
     width: 80%;
 }
-/* .pdO{
-    width: 0px;
-} */
-/* .tb{
-    display: inline-table;
-} */
+.fr{
+    margin-top: 3%;
+    float: right;
+}

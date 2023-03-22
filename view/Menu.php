@@ -55,10 +55,10 @@
                         
                         <?php } ?>
                     </table>
-                    <center>
-                        <button class="w" type="reset">Reset</button>
-                        <button class="b" type="submit">Buy</button>
-                    </center>                
+                    <div class="fr col-6">
+                        <button class="w" type="reset"> Reset </button>
+                        <button class="b" type="submit"> Buy </button>
+                    </div>
                 </form>
             </div>
         </div>
