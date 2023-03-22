@@ -3,14 +3,14 @@
     color: #fff;
   }
   * {
-    box-sizing: 100vh;
+    box-sizing: border-box;
   }
   
   /* Create a column layout with Flexbox */
   .row {
     display: flex;
     margin: auto;
-    height: 100vh;
+    height: 89.8vh;
     /* color: #fff; */
   }
   

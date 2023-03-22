@@ -1,4 +1,3 @@
-
 .bg{
     background: #fff;
     padding: 3%;
@@ -16,13 +15,13 @@ tr:nth-child(even) {
 button{
     float: right;
     margin-top: 5%;
-    width: 20%;
+    width: 50%;
 }
 .b{
     background: #41250d;
     color: #fff;
     border: solid #41250d;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 .b:hover{
     background: #fff;
@@ -32,7 +31,7 @@ button{
     background: #fff;
     border: solid #9b8470;
     color: #856e5a;
-    border-radius: 8px;
+    border-radius: 5px;
 }
 .w:hover{
     background: #9b8470;
@@ -45,6 +44,6 @@ input{
     margin: 3px;
     width: 80%;
 }
-.tb{
+/* .tb{
     display: inline-table;
-}
+} */
