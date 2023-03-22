@@ -28,6 +28,7 @@ button{
     color: #41250d;
 }
 .w{
+    float: left;
     background: #fff;
     border: solid #9b8470;
     color: #856e5a;
@@ -44,6 +45,9 @@ input{
     margin: 3px;
     width: 80%;
 }
+/* .pdO{
+    width: 0px;
+} */
 /* .tb{
     display: inline-table;
 } */
