@@ -59,24 +59,18 @@
             echo "<pre>";
             print_r($_POST);
             echo "</pre>";
-            $menu_id; $order_amount;
             foreach ($_POST as $key => $value) {
-                for($i = 0; $i < 10; $i++){
-                    $menuid = "menu".$i;
-                    $amount = "amount".$i;
-                    if($key == $menuid){
-                        echo $menuid."<br>";
-                        $menu_id[$i] = $value;
-                    }
-                    if($key == $amount){
-                        echo $amount."<br>";
-                        $order_amount[$i] = $value;
-                    }
+                if($value != ""){
+                    $clCon->buyOrder($_SESSION['userses']['id'],$key,$value);
                 }
             }
-            foreach ($menu_id as $key => $value) {
-                $clCon->buyOrder($_SESSION['userses']['id'],$menu_id[$key],$order_amount[$key]);
-            }
+            echo "<script>goto('../view/listorder.php')</script>";
+        }
+        elseif($_GET["ac"]==3){
+            echo "<script>console.log('cancel order')</script>";
+            echo $_POST['order_id'];
+            $status = $clCon->delOrder($_POST['order_id']);
+            echo "<br>status : ".$status;
             echo "<script>goto('../view/listorder.php')</script>";
         }
     }

@@ -13,46 +13,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
     <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/menuBar.css">
     <title>SignUp</title>
 </head>
 <body>
+<div class="row">
+  <div class="left" style="background-color:#9b8470; color: #fff;">
+    <h2>Menu</h2>
+    <ul id="myMenu">
+      <li><a href="listorder.php">list order</a></li>
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#fff;">
     <div class="r">
-        <p>
-            <?php echo $_SESSION['userses']['user'] ?> | <a href="logout.php">Logout</a>
-        </p>
-    </div>
-    <div class="row bg">
-        <div class="col-10"><h3>Menu</h3></div> 
-        <div class="col-2 r"><a href="listorder.php">list order</a></div> 
-        <div class="col-12">
-            <form action="total.php" method="post">
-                <table>
-                    <tr>
-                        <th>Menu Name</th>
-                        <th style="width:23%">Order Amount</th>
-                        <th style="width:23%">Price</th>
-                    </tr>
-                    <?php
-                        foreach ($munuTable as $value) {
-                    ?>
-                    
-                    <tr>
-                        <th><?= $value["menu_name"] ?></th>
-                        <th>
-                            <input type="number" name="<?= $value["menu_id"] ?>" id="<?= $value["menu_id"] ?>">
-                        </th>
-                        <th id="price"><?= $value["menu_price"] ?></th>
-                    </tr>
-                    
-                    <?php } ?>
-                </table>
-                <center>
-                    <button class="w" type="reset">Reset</button>
-                    <button class="b" type="submit">Buy</button>
-                </center>                
-            </form>
+            <p>
+                <?php echo $_SESSION['userses']['user'] ?> 
+            </p>
         </div>
-    </div>
+        <div class="row bg">
+            <div class="col-12">
+                <form action="total.php" method="post">
+                    <table>
+                        <tr>
+                            <th>Menu Name</th>
+                            <th style="width:23%">Order Amount</th>
+                            <th style="width:23%">Price</th>
+                        </tr>
+                        <?php
+                            foreach ($munuTable as $value) {
+                        ?>
+                        
+                        <tr>
+                            <th><?= $value["menu_name"] ?></th>
+                            <th>
+                                <input type="number" name="<?= $value["menu_id"] ?>" id="<?= $value["menu_id"] ?>">
+                            </th>
+                            <th id="price"><?= $value["menu_price"] ?></th>
+                        </tr>
+                        
+                        <?php } ?>
+                    </table>
+                    <center>
+                        <button class="w" type="reset">Reset</button>
+                        <button class="b" type="submit">Buy</button>
+                    </center>                
+                </form>
+            </div>
+        </div>
+  </div>
+    
 </body>
 </html>
 <?php 

@@ -1,6 +1,5 @@
 <?php
     include_once '../api/controls.php';
-    $orderTable = $clCon->showlistOrder();
     if(isset($_SESSION['userses'])){
 ?>
 <!DOCTYPE html>
@@ -11,18 +10,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
-    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/list.css">
+    <link rel="stylesheet" href="css/menuBar.css">
     <title>SignUp</title>
 </head>
 <body>
+<div class="row">
+  <div class="left" style="background-color:#9b8470; color: #fff;">
+    <h2>Menu</h2>
+    <ul id="myMenu">
+      <li><a href="Menu.php">Menu</a></li>
+      <li><a href="logout.php">Logout</a></li>
+    </ul>
+  </div>
+  
+  <div class="right" style="background-color:#fff;">
     <div class="r">
         <p>
-            Username | <a href="logout.php">Logout</a>
+            <?php echo $_SESSION['userses']['user'] ?> | <a href="logout.php">Logout</a>
         </p>
     </div>
     <div class="row bg">
-        <div class="col-10"><h3>List Order</h3></div> 
-        <div class="col-2 r"><a href="Menu.php">Menu</a></div> 
         <div class="col-12">
             <table>
                 <tr>
@@ -31,19 +39,23 @@
                     <th style="width:20%">Price</th>
                     <th style="width:20%"></th>
                 </tr>
-                <?php
-                    $total = 0;
-                    foreach ($orderTable as $value) {
-                        $total += $value['order_amount']*$value['menu_price'];
-                ?>
-                <tr>
-                    <td><?= $value['menu_name'] ?></td>
-                    <td><?= $value['order_amount'] ?></td>
-                    <td><?= $value['menu_price'] ?></td>
-                    <td><button class="b">Cancel</button></td>
-                    
-                </tr>
-                <?php } ?>
+                <form action="../api/controls.php?ac=3" method="post">
+                    <?php
+                        $total = 0;
+                        $order = $clCon->showlistOrder($_SESSION['userses']['id']);
+                        foreach ($order as $value) {
+                            $total += $value['order_amount']*$value['menu_price'];
+                    ?>
+                    <tr>
+                        <td><?= $value['menu_name'] ?></td>
+                        <td><?= $value['order_amount'] ?></td>
+                        <td><?= $value['menu_price'] ?></td>
+                        <input type="hidden" name="order_id" value="<?= $value['order_id'] ?>">
+                        <td><button class="b" type="submit">Cancel</button></td>
+                        
+                    </tr>
+                    <?php } ?>
+                </form>
             </table>
         <!-- </div>
         <div class="col-12"> -->
@@ -56,6 +68,7 @@
             </table>
         </div>
     </div>
+</div>
 </body>
 </html>
 <?php }else{

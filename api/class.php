@@ -30,9 +30,12 @@
             }
         }
         public function delOrder($id){
-            $sql = "DELETE FROM `order` WHERE `order_id`= $id";
+            $sql = "DELETE FROM `order` WHERE `order_id`= {$id}";
             $stmt = $this->db->prepare($sql);
             $stmt->execute();
+            if($stmt->rowCount() == 1){
+                return 1;
+            }
         }
         public function showMenu(){
             $sql = "SELECT * FROM menu";
@@ -42,8 +45,8 @@
             $sql = "SELECT menu_name, menu_price FROM menu WHERE menu_id = {$id}";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
-        public function showlistOrder(){
-            $sql = "SELECT * FROM `order`,`menu`";
+        public function showlistOrder($id){
+            $sql = "SELECT * FROM `order`,`menu` WHERE order.user_id = {$id} and order.menu_id = menu.menu_id";
             return $this->db->query($sql)->fetchall(PDO::FETCH_ASSOC);
         }
     }
