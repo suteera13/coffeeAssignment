@@ -29,7 +29,7 @@
   <div class="right" style="background-color:#fff;">
     <div class="r">
             <p>
-                <?php echo $_SESSION['userses']['user'] ?> 
+            Name | <?php echo $_SESSION['userses']['user'] ?> 
             </p>
         </div>
         <div class="row bg">

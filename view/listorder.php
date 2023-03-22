@@ -27,7 +27,7 @@
   <div class="right" style="background-color:#fff;">
     <div class="r">
         <p>
-            <?php echo $_SESSION['userses']['user'] ?> | <a href="logout.php">Logout</a>
+            Name | <?php echo $_SESSION['userses']['user'] ?>
         </p>
     </div>
     <div class="row bg">
