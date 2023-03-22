@@ -49,7 +49,10 @@
                     <tr>
 <!-- edit del------------------------------------------------------------ -->
                         <td><?= $value['menu_name'] ?></td>
-                        <td><input type="number" name="order_amount" value="<?= $value['order_amount'] ?>"></td>
+                        <td>
+                            <input type="number" name="order_amount" 
+                            value="<?= $value['order_amount'] ?>" min="0" max="10">
+                        </td>
                         <td><?= $value['menu_price'] ?></td>
                         <td>
                             <input type="hidden" name="order_id" value="<?= $value['order_id'] ?>">
