@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
     <link href='https://fonts.googleapis.com/css?family=Aboreto' rel='stylesheet'>
     <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/menuBar.css">
+    <link rel="stylesheet" href="css/bar.css">
     <title>SignUp</title>
 </head>
 <body>

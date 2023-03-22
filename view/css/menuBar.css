@@ -3,13 +3,12 @@
   color: #fff;
 }
 * {
-  box-sizing: border-box;
+  box-sizing: 100vh;
 }
 
 /* Create a column layout with Flexbox */
 .row {
   display: flex;
-  margin: 50px;
   /* color: #fff; */
 }
 
